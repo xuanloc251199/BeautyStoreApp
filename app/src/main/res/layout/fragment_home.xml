@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    tools:context=".view.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        tools:ignore="UselessParent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvUser"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentStart="true"
+            app:cardCornerRadius="28dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/avt" />
+        </androidx.cardview.widget.CardView>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/cartButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_cart" />
+
+            <TextView
+                android:id="@+id/tvItemCount"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="top|end"
+                android:background="@drawable/circle"
+                android:text="0"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@android:color/white"
+                android:visibility="gone"
+                tools:ignore="SmallSp" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/password"
+        android:background="@drawable/custom_search_box"
+        android:backgroundTint="@color/white"
+        android:drawableStart="@drawable/ic_search"
+        android:drawableEnd="@drawable/ic_mic"
+        android:drawablePadding="8dp"
+        android:hint="@string/search_any_product"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_medium"
+        android:textColorHighlight="@color/cardview_dark_background"
+        android:layout_marginTop="20dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"
+        tools:listitem="@layout/item_product"/>
+
+</LinearLayout>
